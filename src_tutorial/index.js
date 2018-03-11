@@ -30,8 +30,12 @@ const initial_state = {
   }
 };
 
-let middleware = applyMiddleware(routerMiddleware(browserHistory));
-const store = createStore(reducers, initial_state, middleware);//window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+let middleware = routerMiddleware(browserHistory);
+const store = createStore(reducers, initial_state, composeWithDevTools(
+  applyMiddleware(middleware),
+  // other store enhancers if any
+));
+//window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const history = syncHistoryWithStore(browserHistory, store);
 // render te main component
 ReactDOM.render(

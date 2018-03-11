@@ -22,7 +22,7 @@ class UserList extends React.Component {
   render () {
     // pagination
     const ppage = 5;
-    const pages = Math.ceil(this.props.users.length) / ppage;
+    const pages = Math.ceil(this.props.users.length / ppage);
 
     const current_page = this.props.page;
 
@@ -30,7 +30,7 @@ class UserList extends React.Component {
     let start_count = 0;
 
     let paginations = [];
-    for (let number = 1; number <= 10; number++) {
+    for (let number = 1; number <= pages; number++) {
       paginations.push(
         <Pagination.Item active={number === current_page} key={number} data-page={number}>{number}</Pagination.Item>
       );
