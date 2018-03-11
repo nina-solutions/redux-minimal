@@ -1,11 +1,13 @@
 import React from"react";
 import UserListElement from "./UserListElement";
 import {connect} from "react-redux";
+import {Table} from "react-bootstrap";
+
 
 class UserList extends React.Component {
   render () {
     return (
-      <table>
+      <Table bordered hover responsive striped>
         <thead>
         <tr>
           <th>ID</th>
@@ -22,7 +24,7 @@ class UserList extends React.Component {
           })
         }
         </tbody>
-      </table>
+      </Table>
     );
   }
 }

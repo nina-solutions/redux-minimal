@@ -6,6 +6,8 @@ import {createStore} from "redux"
 import {reducers} from "./reducers/index";
 import {Provider} from "react-redux";
 
+import "./stylesheet/main.scss"
+
 // build users list
 let users = [];
 for (let i=1; i < 12; i++) {

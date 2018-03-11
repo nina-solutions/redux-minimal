@@ -12,7 +12,9 @@ export default class App extends React.Component {
    * @returns {UserList}
    */
   render() {
-    return (<UserList/>);
+    return (<div className="container">
+      <UserList/>
+    </div>);
 
   }
 }
