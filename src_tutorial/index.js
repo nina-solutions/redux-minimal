@@ -16,7 +16,7 @@ import Home from "./pages/Home";
 
 // build users list
 let users = [];
-for (let i=1; i < 12; i++) {
+for (let i=1; i < 40; i++) {
   users.push({
     id: i,
     username: "JK " + i,
