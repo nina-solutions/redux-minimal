@@ -1,6 +1,7 @@
 import React from"react";
 import {Button, Glyphicon} from "react-bootstrap";
 import {connect} from "react-redux";
+import {Link} from "react-router";
 
 /**
  * User List Element component
@@ -29,8 +30,9 @@ class UserListElement extends React.Component {
       <td>{user.username}</td>
       <td>{user.job}</td>
       <td>
-        <a href={'user-edit/' + user.id}>
-          <Button bsSize="xsmall">Edit <Glyphicon glyph="edit"/></Button></a>
+        <Link to={'user-edit/' + user.id}>
+          <Button bsSize="xsmall">Edit <Glyphicon glyph="edit"/></Button>
+        </Link>
       </td>
       <td>
         <Button
