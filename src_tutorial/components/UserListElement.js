@@ -47,8 +47,8 @@ class UserListElement extends React.Component {
    * @param event
    */
   modalDeleteShow (event) {
-    const id = Number(event.target.data.id);
-    const username = event.target.data.username;
+    const id = Number(event.target.dataset.id);
+    const username = event.target.dataset.username;
     this.props.dispatch({
       type: 'users.modalDeleteShow',
       id: id,

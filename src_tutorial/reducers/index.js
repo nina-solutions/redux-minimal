@@ -1,6 +1,7 @@
 
+import users from './users';
+import {combineReducers} from "redux";
 
-export function reducers(state, action) {
-  // no action return default state
-  return state;
-}
+export const reducers = combineReducers({
+  users: users
+});

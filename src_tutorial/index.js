@@ -5,6 +5,7 @@ import App from "./components/App";
 import {createStore} from "redux"
 import {reducers} from "./reducers/index";
 import {Provider} from "react-redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import "./stylesheet/main.scss"
 
@@ -19,10 +20,12 @@ for (let i=1; i < 12; i++) {
 }
 
 const initial_state = {
-  users: users
+  users: {
+    list: users
+  }
 };
 
-const store = createStore(reducers, initial_state);
+const store = createStore(reducers, initial_state, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 // render te main component
 ReactDOM.render(
